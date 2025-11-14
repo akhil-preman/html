@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Changing image and text</title>
+<style>
+img{
+width:500px;
+border:2px solid green;
+border-radius:50%;
+padding:5px;
+height:500px;
+}
+#p1{
+font-size:50px;
+}
+</style>
+<script>
+function one()
+{
+document.getElementById("img").src="rtx300.jpg";
+document.getElementById("p1").innerHTML= "RTX 300";
+document.getElementById("p1").style.color= "red";
+}
+function two()
+{
+document.getElementById("img").src="cb350rs.jpg";
+document.getElementById("p1").innerHTML="CB 350 RS";
+document.getElementById("p1").style.color= "blue";
+}
+</script>
+</head>
+<body>
+<center>
+<img src="bullet350.jpg" id = "img" onmouseover="one()" onmouseout="two()">
+<b><p id="p1"> BULLET 350</p></b>
+<b> <p id = "p1"> </p></b>
+</center>
+</body>
+</html>
