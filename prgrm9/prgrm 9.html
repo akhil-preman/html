@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Changing image and text</title>
+
+<style>
+body{
+    background: #f3f3f3;
+    font-family: Arial, sans-serif;
+}
+
+img{
+    width: 450px;
+    height: 450px;
+    border: 3px solid #28a745;
+    border-radius: 50%;
+    padding: 8px;
+    transition: 0.4s ease; /* smooth animation */
+}
+
+img:hover{
+    transform: scale(1.05); /* zoom on hover */
+}
+
+#p1{
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s ease;
+}
+</style>
+
+<script>
+function one() {
+    document.getElementById("img").src = "rtx300.jpg";
+    document.getElementById("p1").innerHTML = "RTX 300";
+    document.getElementById("p1").style.color = "red";
+}
+
+function two() {
+    document.getElementById("img").src = "cb350rs.jpg";
+    document.getElementById("p1").innerHTML = "CB 350 RS";
+    document.getElementById("p1").style.color = "blue";
+}
+</script>
+
+</head>
+
+<body>
+<center>
+    <img src="bullet350.jpg" id="img" onmouseover="one()" onmouseout="two()">
+    <p id="p1">BULLET 350</p>
+</center>
+</body>
+</html>
